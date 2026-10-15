@@ -31,14 +31,48 @@ A classificação dos filmes segue os seguintes critérios:
 
 ## 🧪 Testes automatizados
 
-Foram desenvolvidos **10 casos de teste automatizados utilizando Mocha**, contemplando:
+Foram desenvolvidos **10 casos de teste automatizados utilizando Mocha e Assert**, com o objetivo de validar as funcionalidades e regras de negócio da aplicação.
 
-- Validação da quantidade de avaliações.
-- Verificação do cálculo da média das notas.
-- Validação das classificações dos filmes.
-- Verificação do comportamento de filmes sem avaliações.
+### Casos de teste executados
 
-Todos os 10 testes foram executados com sucesso.
+| ID | Cenário de teste | Resultado esperado | Status |
+|---|---|---|---|
+| CT01 | Validar a quantidade de avaliações do filme "Minha mãe é uma peça" | Retornar 5 avaliações | ✅ Passou |
+| CT02 | Validar a quantidade de avaliações do filme "Se eu fosse você" | Retornar 3 avaliações | ✅ Passou |
+| CT03 | Validar um filme sem avaliações | Retornar 0 avaliações | ✅ Passou |
+| CT04 | Calcular a média do filme "Minha mãe é uma peça" | Média igual a 4,4 | ✅ Passou |
+| CT05 | Calcular a média do filme "Saneamento Básico" | Média igual a 3,2 | ✅ Passou |
+| CT06 | Calcular a média do filme "Se eu fosse você" | Média igual a 2,0 | ✅ Passou |
+| CT07 | Calcular a média de um filme sem avaliações | Retornar média 0 | ✅ Passou |
+| CT08 | Validar a classificação de um filme com média 4,4 | Filme recomendado | ✅ Passou |
+| CT09 | Validar a classificação de um filme com média 3,2 | Filme razoável | ✅ Passou |
+| CT10 | Validar a classificação de um filme com média 2,0 | Filme ruim | ✅ Passou |
+
+### Resultado da execução
+
+**Total de testes:** 10
+
+**Testes aprovados:** 10
+
+**Testes com falha:** 0
+
+**Ferramenta:** Mocha
+
+Todos os casos de teste foram executados com sucesso.
+
+### Como executar os testes
+
+No terminal, execute:
+
+```bash
+npm test
+```
+
+### Objetivo dos testes
+
+Os testes foram desenvolvidos para verificar se a aplicação realiza corretamente a contagem das avaliações, o cálculo das médias e a classificação dos filmes conforme as regras de negócio estabelecidas.
+
+Também foram considerados cenários com ausência de avaliações, permitindo verificar o comportamento das funções nessa situação.
 
 ## 🚀 Como executar o projeto
 
